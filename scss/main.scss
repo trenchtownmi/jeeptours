@@ -1,0 +1,191 @@
+@import url(../css/reset.css);
+$font: "Roboto", sans-serif;
+a {
+  color: #fff;
+}
+
+body {
+  font-family: $font;
+  color: #fff;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 100vh;
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .logo {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      p {
+        margin-left: 10px;
+      }
+    }
+
+    .header__top-btn {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        margin-left: 10px;
+        color: #fff;
+        padding: 13px 30px;
+        background: #424868;
+        border-radius: 10px;
+        transition: background-color 0.2s ease;
+        &:hover {
+          background-color: #2b304d;
+        }
+      }
+    }
+  }
+  .nav {
+    border-top: 1px solid rgb(189, 181, 181);
+    border-bottom: 1px solid rgb(223, 216, 216);
+    padding: 20px 0;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+      li {
+        a {
+          &:hover {
+            color: beige;
+          }
+        }
+      }
+    }
+  }
+  .header__content {
+    text-align: center;
+    padding-top: 200px;
+    h1 {
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 90px;
+      line-height: 130%;
+      /* identical to box height, or 117px */
+    }
+    p {
+      font-size: 20px;
+    }
+    @media (max-width: 610px) {
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  @media (max-width: 610px) {
+    .header__top {
+      justify-content: center;
+      row-gap: 10px;
+    }
+    .header__top-btn {
+      justify-content: center;
+      column-gap: 20px;
+      row-gap: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+main {
+  .section-tours {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: black;
+  }
+  .section__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 130%;
+    /* or 47px */
+
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .tours__inner {
+    display: flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    .tours__item {
+      // text-align: center;
+      max-width: 250px;
+      overflow: hidden;
+      box-shadow: 3px 8px 27px 0px rgba(34, 60, 80, 0.2);
+      img {
+        width: 250px;
+        height: 172px;
+        object-fit: cover;
+        transition: transform 0.2s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      h3,
+      p {
+        margin: 10px;
+        padding: 0 10px;
+        small {
+          font-size: 12px;
+        }
+      }
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media (max-width: 525px) {
+    .tours__inner {
+      justify-content: center;
+    }
+  }
+}
+
+.aboutme__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: black;
+  .aboutme__text {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  @media (max-width: 525px) {
+    .aboutme__text {
+      font-size: 16px;
+    }
+  }
+}
